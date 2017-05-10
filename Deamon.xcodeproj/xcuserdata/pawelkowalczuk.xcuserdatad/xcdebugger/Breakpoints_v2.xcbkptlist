@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Deamon/AppDelegate.swift"
-            timestampString = "516039678.396512"
+            timestampString = "516126579.504299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "checkApps()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "askAccessibilityPermissions()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,6 +11,8 @@
 		720E46A81EC0C7AB000D4464 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E46A71EC0C7AB000D4464 /* ViewController.swift */; };
 		720E46AA1EC0C7AB000D4464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720E46A91EC0C7AB000D4464 /* Assets.xcassets */; };
 		720E46AD1EC0C7AB000D4464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720E46AB1EC0C7AB000D4464 /* Main.storyboard */; };
+		720E46B81EC36471000D4464 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720E46B71EC36471000D4464 /* Cocoa.framework */; };
+		720E46BA1EC36478000D4464 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720E46B91EC36478000D4464 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		720E46A91EC0C7AB000D4464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		720E46AC1EC0C7AB000D4464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		720E46AE1EC0C7AB000D4464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		720E46B71EC36471000D4464 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		720E46B91EC36478000D4464 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720E46BA1EC36478000D4464 /* Carbon.framework in Frameworks */,
+				720E46B81EC36471000D4464 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,7 @@
 			children = (
 				720E46A41EC0C7AB000D4464 /* Deamon */,
 				720E46A31EC0C7AB000D4464 /* Products */,
+				720E46B61EC36471000D4464 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +66,15 @@
 				720E46AE1EC0C7AB000D4464 /* Info.plist */,
 			);
 			path = Deamon;
+			sourceTree = "<group>";
+		};
+		720E46B61EC36471000D4464 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				720E46B91EC36478000D4464 /* Carbon.framework */,
+				720E46B71EC36471000D4464 /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
