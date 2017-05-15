@@ -8,7 +8,6 @@
 
 import Cocoa
 import ApplicationServices
-import Carbon
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
