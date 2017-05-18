@@ -27,14 +27,11 @@ class WindowCoordinator: WindowCoordinatorType {
     var presentingWindow: NSWindow?
     
     func displayWindow(with result: String) {
-        print(result)
         
-        let frame = NSRect(x: 0, y: 0, width: 200, height: 200)
-        presentingWindow = NSWindow(contentRect: frame,
-                                    styleMask: .borderless,
-                                    backing: .buffered, defer: false)
+        let mainWindow = NSApplication.shared().windows.first(where: { $0 is DeamonWindow})
+        let receiverView = (mainWindow?.contentViewController as? ViewController)?.receiverView
+        let viewModel = ReceiverViewModel(shouldRegister: false, disableTextField: false, textViewResult: result)
         
-        presentingWindow?.backgroundColor = NSColor.blue
-        presentingWindow?.makeKeyAndOrderFront(NSApp)
+        receiverView?.load(with: viewModel)
     }
 }

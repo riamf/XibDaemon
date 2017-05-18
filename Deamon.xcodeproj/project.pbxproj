@@ -13,6 +13,9 @@
 		720E46AD1EC0C7AB000D4464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720E46AB1EC0C7AB000D4464 /* Main.storyboard */; };
 		720E46B81EC36471000D4464 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720E46B71EC36471000D4464 /* Cocoa.framework */; };
 		720E46BE1EC83D6B000D4464 /* ReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E46BD1EC83D6B000D4464 /* ReceiverView.swift */; };
+		72DC4A411ECDF6BC00597AE0 /* ReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC4A401ECDF6BC00597AE0 /* ReceiverViewModel.swift */; };
+		72DDCF261ECE02D700FA4C9F /* DeamonWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DDCF251ECE02D700FA4C9F /* DeamonWindow.swift */; };
+		72DDCF291ECE03CF00FA4C9F /* MobileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DDCF281ECE03CF00FA4C9F /* MobileMap.swift */; };
 		72EF1F401EC85C77002DB4F7 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EF1F3F1EC85C77002DB4F7 /* AEXML.framework */; };
 		72EF1F441EC85FFE002DB4F7 /* DragAndDropCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EF1F431EC85FFE002DB4F7 /* DragAndDropCoordinator.swift */; };
 		72EF1F451EC86357002DB4F7 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EF1F3F1EC85C77002DB4F7 /* AEXML.framework */; };
@@ -45,6 +48,9 @@
 		720E46B71EC36471000D4464 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		720E46B91EC36478000D4464 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		720E46BD1EC83D6B000D4464 /* ReceiverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverView.swift; sourceTree = "<group>"; };
+		72DC4A401ECDF6BC00597AE0 /* ReceiverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiverViewModel.swift; path = ViewModel/ReceiverViewModel.swift; sourceTree = "<group>"; };
+		72DDCF251ECE02D700FA4C9F /* DeamonWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeamonWindow.swift; sourceTree = "<group>"; };
+		72DDCF281ECE03CF00FA4C9F /* MobileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobileMap.swift; path = Mappers/MobileMap.swift; sourceTree = "<group>"; };
 		72EF1F3F1EC85C77002DB4F7 /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AEXML.framework; path = Carthage/Build/Mac/AEXML.framework; sourceTree = "<group>"; };
 		72EF1F431EC85FFE002DB4F7 /* DragAndDropCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragAndDropCoordinator.swift; path = Coordinators/DragAndDropCoordinator.swift; sourceTree = "<group>"; };
 		72EF1F481EC866D0002DB4F7 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Parsers/Parser.swift; sourceTree = "<group>"; };
@@ -89,15 +95,18 @@
 		720E46A41EC0C7AB000D4464 /* Deamon */ = {
 			isa = PBXGroup;
 			children = (
+				72DDCF271ECE03B100FA4C9F /* Mappers */,
 				72EF1F4B1EC86A15002DB4F7 /* TestFiles */,
 				72EF1F4A1EC86809002DB4F7 /* Parsers */,
 				72EF1F421EC85FEF002DB4F7 /* Coordinators */,
+				72DC4A3F1ECDF69D00597AE0 /* ViewModel */,
 				72EF1F411EC85D25002DB4F7 /* Views */,
 				720E46A51EC0C7AB000D4464 /* AppDelegate.swift */,
 				720E46A71EC0C7AB000D4464 /* ViewController.swift */,
 				720E46A91EC0C7AB000D4464 /* Assets.xcassets */,
 				720E46AB1EC0C7AB000D4464 /* Main.storyboard */,
 				720E46AE1EC0C7AB000D4464 /* Info.plist */,
+				72DDCF251ECE02D700FA4C9F /* DeamonWindow.swift */,
 			);
 			path = Deamon;
 			sourceTree = "<group>";
@@ -110,6 +119,22 @@
 				720E46B71EC36471000D4464 /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72DC4A3F1ECDF69D00597AE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72DC4A401ECDF6BC00597AE0 /* ReceiverViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		72DDCF271ECE03B100FA4C9F /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				72DDCF281ECE03CF00FA4C9F /* MobileMap.swift */,
+			);
+			name = Mappers;
 			sourceTree = "<group>";
 		};
 		72EF1F411EC85D25002DB4F7 /* Views */ = {
@@ -222,11 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				720E46A81EC0C7AB000D4464 /* ViewController.swift in Sources */,
+				72DDCF261ECE02D700FA4C9F /* DeamonWindow.swift in Sources */,
 				72EF1F441EC85FFE002DB4F7 /* DragAndDropCoordinator.swift in Sources */,
 				72EF1F581ECCBE2B002DB4F7 /* WindowCoordinator.swift in Sources */,
+				72DC4A411ECDF6BC00597AE0 /* ReceiverViewModel.swift in Sources */,
 				72EF1F491EC866D0002DB4F7 /* Parser.swift in Sources */,
 				720E46BE1EC83D6B000D4464 /* ReceiverView.swift in Sources */,
 				720E46A61EC0C7AB000D4464 /* AppDelegate.swift in Sources */,
+				72DDCF291ECE03CF00FA4C9F /* MobileMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

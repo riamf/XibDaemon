@@ -14,11 +14,6 @@ class ReceiverView: NSView {
     
     fileprivate let dragAndDropCoordinator: DragAndDropCoordinatorType = DragAndDropCoordinator(parser: XMLParser())
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup()
-    }
-    
     fileprivate var isReceivingDrag = false {
         didSet {
             needsDisplay = true
@@ -35,12 +30,23 @@ class ReceiverView: NSView {
             path.stroke()
         }
     }
+    
+    func load(with viewModel: ReceiverViewModel) {
+        
+        textView.isHidden = viewModel.disableTextField
+        textView.string = viewModel.textViewResult
+        viewModel.shouldRegister ? register() : unregister()
+    }
 }
 //MARK: Dragging
 extension ReceiverView {
     
-    fileprivate func setup() {
+    fileprivate func register() {
         register(forDraggedTypes: dragAndDropCoordinator.acceptableTypes)
+    }
+    
+    fileprivate func unregister() {
+        unregisterDraggedTypes()
     }
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {

@@ -33,19 +33,20 @@ class XMLParser: Parser {
         guard let xml = try? AEXMLDocument(xml: data) else { return }
         
         let activeDesigns = xml.root[XIBElements.objects].children.filter({ $0.name != XIBElements.placeholder })
+        let mapper = Mapper()
         
         for design in activeDesigns {
             
             let className = design.attributes[XIBAttribute.customClass] ??
                 url.lastPathComponentWithoutExtension
             let viewModelType = "\(className)ViewModel"
-            let superClass = design.className
+            let superClass = mapper.value(with: design.className)
             let subviews = design[XIBElements.subviews]
             
             var resulting = "class \(className): \(superClass) { \r\n \r\n"
             
             for (index,view) in subviews.children.enumerated() {
-                let subviewType = view.attributes[XIBAttribute.customClass] ?? view.className
+                let subviewType = mapper.value(with: view.attributes[XIBAttribute.customClass] ?? view.className)
                 let name = view.attributes[XIBAttribute.userLabel] ?? "outlet_\(index)"
 
                 resulting += "\t @IBOutlet private weak var \(name): \(subviewType)!\r\n"

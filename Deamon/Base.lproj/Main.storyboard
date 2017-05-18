@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
@@ -664,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="DeamonWindow" customModule="Deamon" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -686,18 +686,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-IB-oyn">
+                                <rect key="frame" x="-6" y="219" width="492" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fsN-5g-ttO"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2qI-2Z-G01">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="resetContent:" target="XfG-lQ-9wD" id="Yca-KL-c9u"/>
+                                </connections>
+                            </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ7-i0-db5">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="226"/>
                                 <clipView key="contentView" id="dwI-Vg-b6q">
-                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
+                                    <rect key="frame" x="1" y="1" width="478" height="224"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView hidden="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="ka8-Ww-Baa">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="268"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="224"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="478" height="268"/>
-                                            <size key="maxSize" width="478" height="10000000"/>
+                                            <size key="minSize" width="478" height="224"/>
+                                            <size key="maxSize" width="480" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -708,7 +721,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0if-rI-5yV">
-                                    <rect key="frame" x="463" y="1" width="16" height="268"/>
+                                    <rect key="frame" x="463" y="1" width="16" height="224"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -716,13 +729,19 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="PJ7-i0-db5" secondAttribute="bottom" id="5WR-nO-Xlj"/>
                             <constraint firstAttribute="trailing" secondItem="PJ7-i0-db5" secondAttribute="trailing" id="FWL-RX-Luf"/>
-                            <constraint firstItem="PJ7-i0-db5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="fxk-NO-2rf"/>
+                            <constraint firstItem="c3F-IB-oyn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ST5-Lr-WL2"/>
+                            <constraint firstItem="PJ7-i0-db5" firstAttribute="top" secondItem="c3F-IB-oyn" secondAttribute="bottom" id="cwp-XX-Kqe"/>
+                            <constraint firstAttribute="trailing" secondItem="c3F-IB-oyn" secondAttribute="trailing" id="d4S-GT-mmC"/>
                             <constraint firstItem="PJ7-i0-db5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="qj2-u0-rB6"/>
+                            <constraint firstItem="c3F-IB-oyn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ys8-o9-vbJ"/>
                         </constraints>
                         <connections>
                             <outlet property="textView" destination="ka8-Ww-Baa" id="NH6-19-5pj"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="c3F-IB-oyn" id="URw-gX-hYZ"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
