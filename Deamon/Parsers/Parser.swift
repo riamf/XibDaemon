@@ -41,7 +41,10 @@ class XMLParser: Parser {
                 url.lastPathComponentWithoutExtension
             let viewModelType = "\(className)ViewModel"
             let superClass = mapper.value(with: design.className)
-            let subviews = design[XIBElements.subviews]
+            var subviews = design[XIBElements.subviews]
+            if subviews.all == nil {
+                subviews = design[XIBElements.tableViewCellContentView][XIBElements.subviews]
+            }
             
             var resulting = "class \(className): \(superClass) { \r\n \r\n"
             

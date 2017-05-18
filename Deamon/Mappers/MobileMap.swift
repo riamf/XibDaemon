@@ -40,7 +40,7 @@ private extension String {
     var UICapitalized: String {
         
         let capitalizeWords = [
-            "view", "cell", "indicator", "control", "Field", "Picker"
+            "view", "cell", "indicator", "control", "field", "picker"
         ]
         var capitalized = self.capitalized
         
