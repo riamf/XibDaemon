@@ -686,12 +686,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwB-dn-1wF">
-                                <rect key="frame" x="151" y="118" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yPy-IT-BMy"/>
-                            </imageView>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ7-i0-db5">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <clipView key="contentView" id="dwI-Vg-b6q">
+                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView hidden="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="ka8-Ww-Baa">
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="268"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="478" height="268"/>
+                                            <size key="maxSize" width="478" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="8UV-Ei-M2n">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0if-rI-5yV">
+                                    <rect key="frame" x="463" y="1" width="16" height="268"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PJ7-i0-db5" secondAttribute="bottom" id="5WR-nO-Xlj"/>
+                            <constraint firstAttribute="trailing" secondItem="PJ7-i0-db5" secondAttribute="trailing" id="FWL-RX-Luf"/>
+                            <constraint firstItem="PJ7-i0-db5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="fxk-NO-2rf"/>
+                            <constraint firstItem="PJ7-i0-db5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="qj2-u0-rB6"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="textView" destination="ka8-Ww-Baa" id="NH6-19-5pj"/>
+                        </connections>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

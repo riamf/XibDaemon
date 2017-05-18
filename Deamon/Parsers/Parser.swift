@@ -57,10 +57,13 @@ class XMLParser: Parser {
             
             resulting += "struct \(viewModelType) { \r\n"
             resulting += "\t \r\n}\r\n"
-            print(resulting)
+            
+            windowCoordinator.displayWindow(with: resulting)
         }
     }
 }
+
+extension XMLParser: WindowCoordinatorAccessible {}
 
 fileprivate extension AEXMLElement {
     var className: String {

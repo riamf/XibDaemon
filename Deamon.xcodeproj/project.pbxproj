@@ -18,6 +18,7 @@
 		72EF1F451EC86357002DB4F7 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EF1F3F1EC85C77002DB4F7 /* AEXML.framework */; };
 		72EF1F461EC86357002DB4F7 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72EF1F3F1EC85C77002DB4F7 /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72EF1F491EC866D0002DB4F7 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EF1F481EC866D0002DB4F7 /* Parser.swift */; };
+		72EF1F581ECCBE2B002DB4F7 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EF1F571ECCBE2B002DB4F7 /* WindowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		72EF1F4E1EC86A6D002DB4F7 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = TestFiles/View.xib; sourceTree = "<group>"; };
 		72EF1F501EC86A94002DB4F7 /* Segmented.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Segmented.xib; path = TestFiles/Segmented.xib; sourceTree = "<group>"; };
 		72EF1F521EC86AC7002DB4F7 /* AllInOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AllInOne.xib; path = TestFiles/AllInOne.xib; sourceTree = "<group>"; };
+		72EF1F571ECCBE2B002DB4F7 /* WindowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowCoordinator.swift; path = Coordinators/WindowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				72EF1F431EC85FFE002DB4F7 /* DragAndDropCoordinator.swift */,
+				72EF1F571ECCBE2B002DB4F7 /* WindowCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				720E46A81EC0C7AB000D4464 /* ViewController.swift in Sources */,
 				72EF1F441EC85FFE002DB4F7 /* DragAndDropCoordinator.swift in Sources */,
+				72EF1F581ECCBE2B002DB4F7 /* WindowCoordinator.swift in Sources */,
 				72EF1F491EC866D0002DB4F7 /* Parser.swift in Sources */,
 				720E46BE1EC83D6B000D4464 /* ReceiverView.swift in Sources */,
 				720E46A61EC0C7AB000D4464 /* AppDelegate.swift in Sources */,

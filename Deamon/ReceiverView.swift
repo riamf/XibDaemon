@@ -10,6 +10,8 @@ import Cocoa
 
 class ReceiverView: NSView {
     
+    @IBOutlet private weak var textView: NSTextView!
+    
     fileprivate let dragAndDropCoordinator: DragAndDropCoordinatorType = DragAndDropCoordinator(parser: XMLParser())
     
     required init?(coder: NSCoder) {

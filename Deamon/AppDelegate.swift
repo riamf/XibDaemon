@@ -11,9 +11,10 @@ import ApplicationServices
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    var statusItem: NSStatusItem!
-    var uiElement: AXUIElement!
+    
+    lazy var windowCoordinator: WindowCoordinatorType = {
+        return WindowCoordinator()
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
