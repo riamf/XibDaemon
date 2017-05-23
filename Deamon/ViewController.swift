@@ -9,10 +9,18 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet private weak var resetButton: NSButton!
+    var receiverView: ReceiverView? {
+        return (view as? ReceiverView)
+    }
+    
+    var receiverViewModel: ReceiverViewModel = ReceiverViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        receiverView?.load(with: receiverViewModel)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +29,8 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    @IBAction fileprivate func resetContent(_ sender: NSButton) {
+        receiverView?.load(with: receiverViewModel)
+    }
 }
-
