@@ -55,7 +55,7 @@ class XMLParser: Parser {
                 resulting += "\t @IBOutlet private weak var \(name): \(subviewType)!\r\n"
             }
             
-            resulting += "\r\n \t func load(viewModel viewModel: \(viewModelType)) {\r\n"
+            resulting += "\r\n \t func load(viewModel: \(viewModelType)) {\r\n"
             
             resulting += "\t }\r\n}\r\n \r\n"
             
